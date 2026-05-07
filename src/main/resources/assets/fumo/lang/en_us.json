@@ -111,5 +111,9 @@
   "advancements.chen_advancement.title": "Chen",
   "entity.fumo.nitori": "Nitori",
   "advancements.marisa_advancement.title": "Marisa",
-  "item.fumo.reimu_item": "Bootleg Reimu Hakurei"
+  "item.fumo.reimu_item": "Bootleg Reimu Hakurei",
+  "entity.fumo.remilia": "Remilia",
+  "item.fumo.remilia_item": "Remilia",
+  "advancements.remilia_advancement.descr": "Obtain Remilia",
+  "advancements.remilia_advancement.title": "Remilia"
 }

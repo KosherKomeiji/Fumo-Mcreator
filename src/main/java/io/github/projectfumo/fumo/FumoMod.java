@@ -3,27 +3,31 @@ package io.github.projectfumo.fumo;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-import net.neoforged.neoforge.network.registration.PayloadRegistrar;
-import net.neoforged.neoforge.network.handling.IPayloadHandler;
-import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
-import net.neoforged.neoforge.event.tick.ServerTickEvent;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.fml.util.thread.SidedThreadGroups;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.IEventBus;
+import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.util.thread.SidedThreadGroups;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.util.Tuple;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.server.TickTask;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import java.util.function.Supplier;
+import java.util.function.Function;
+import java.util.function.BiConsumer;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.Map;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Collection;
-import java.util.ArrayList;
+import java.util.Queue;
+import java.util.PriorityQueue;
+import java.util.Comparator;
+
+import it.unimi.dsi.fastutil.ints.IntObjectPair;
+import it.unimi.dsi.fastutil.ints.IntObjectImmutablePair;
 
 import io.github.projectfumo.fumo.init.FumoModTabs;
 import io.github.projectfumo.fumo.init.FumoModItems;
@@ -34,57 +38,48 @@ public class FumoMod {
 	public static final Logger LOGGER = LogManager.getLogger(FumoMod.class);
 	public static final String MODID = "fumo";
 
-	public FumoMod(IEventBus modEventBus) {
+	public FumoMod(FMLJavaModLoadingContext context) {
 		// Start of user code block mod constructor
 		// End of user code block mod constructor
-		NeoForge.EVENT_BUS.register(this);
-		modEventBus.addListener(this::registerNetworking);
-
-		FumoModItems.REGISTRY.register(modEventBus);
-		FumoModEntities.REGISTRY.register(modEventBus);
-		FumoModTabs.REGISTRY.register(modEventBus);
-
+		MinecraftForge.EVENT_BUS.register(this);
+		IEventBus bus = context.getModEventBus();
+		FumoModItems.REGISTRY.register(bus);
+		FumoModEntities.REGISTRY.register(bus);
+		FumoModTabs.REGISTRY.register(bus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}
 
 	// Start of user code block mod methods
 	// End of user code block mod methods
-	private static boolean networkingRegistered = false;
-	private static final Map<CustomPacketPayload.Type<?>, NetworkMessage<?>> MESSAGES = new HashMap<>();
+	private static final String PROTOCOL_VERSION = "1";
+	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
+	private static int messageID = 0;
 
-	private record NetworkMessage<T extends CustomPacketPayload>(StreamCodec<? extends FriendlyByteBuf, T> reader, IPayloadHandler<T> handler) {
+	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder, BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
+		PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
+		messageID++;
 	}
 
-	public static <T extends CustomPacketPayload> void addNetworkMessage(CustomPacketPayload.Type<T> id, StreamCodec<? extends FriendlyByteBuf, T> reader, IPayloadHandler<T> handler) {
-		if (networkingRegistered)
-			throw new IllegalStateException("Cannot register new network messages after networking has been registered");
-		MESSAGES.put(id, new NetworkMessage<>(reader, handler));
-	}
+	private static final Queue<IntObjectPair<Runnable>> workToBeScheduled = new ConcurrentLinkedQueue<>();
+	private static final PriorityQueue<TickTask> workQueue = new PriorityQueue<>(Comparator.comparingInt(TickTask::getTick));
 
-	@SuppressWarnings({"rawtypes", "unchecked"})
-	private void registerNetworking(final RegisterPayloadHandlersEvent event) {
-		final PayloadRegistrar registrar = event.registrar(MODID);
-		MESSAGES.forEach((id, networkMessage) -> registrar.playBidirectional(id, ((NetworkMessage) networkMessage).reader(), ((NetworkMessage) networkMessage).handler()));
-		networkingRegistered = true;
-	}
-
-	private static final Collection<Tuple<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
-
-	public static void queueServerWork(int tick, Runnable action) {
+	public static void queueServerWork(int delay, Runnable action) {
 		if (Thread.currentThread().getThreadGroup() == SidedThreadGroups.SERVER)
-			workQueue.add(new Tuple<>(action, tick));
+			workToBeScheduled.add(new IntObjectImmutablePair<>(delay, action));
 	}
 
 	@SubscribeEvent
-	public void tick(ServerTickEvent.Post event) {
-		List<Tuple<Runnable, Integer>> actions = new ArrayList<>();
-		workQueue.forEach(work -> {
-			work.setB(work.getB() - 1);
-			if (work.getB() == 0)
-				actions.add(work);
-		});
-		actions.forEach(e -> e.getA().run());
-		workQueue.removeAll(actions);
+	public void tick(TickEvent.ServerTickEvent event) {
+		if (event.phase == TickEvent.Phase.END) {
+			int currentTick = event.getServer().getTickCount();
+			IntObjectPair<Runnable> work;
+			while ((work = workToBeScheduled.poll()) != null) {
+				workQueue.add(new TickTask(currentTick + work.leftInt(), work.right()));
+			}
+			while (!workQueue.isEmpty() && currentTick >= workQueue.peek().getTick()) {
+				workQueue.poll().run();
+			}
+		}
 	}
 }

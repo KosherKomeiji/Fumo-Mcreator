@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 85,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -7,6 +7,7 @@
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
+    "animations": [],
     "name": "Youmu",
     "rarity": "COMMON",
     "creativeTabs": [
@@ -24,12 +25,18 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
+    "repairItems": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
+    "attackSpeed": 1.6,
     "specialInformation": {
       "fixedValue": []
+    },
+    "openGUIOnRightClick": {
+      "fixedValue": false
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -51,6 +58,8 @@
     "animation": "none",
     "isMusicDisc": false,
     "musicDiscLengthInTicks": 0,
-    "musicDiscAnalogOutput": 0
+    "musicDiscAnalogOutput": 0,
+    "providedBannerPatterns": [],
+    "attributeModifiers": []
   }
 }

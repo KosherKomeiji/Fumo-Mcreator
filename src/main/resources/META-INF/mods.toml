@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="CC-BY-NC-SA-4.0"
+
+[[mods]]
+modId="fumo"
+version="18.0.0"
+displayName="Fumo"
+displayURL="https://modrinth.com/mod/fumo"
+logoFile="logo.png"
+credits="MCreator, reimuu"
+authors="KosherKomeiji"
+description="Adds Fumos from Touhou."
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.fumo]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

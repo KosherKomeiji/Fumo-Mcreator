@@ -23,9 +23,12 @@ public class InstantRotateProcedure {
 		}
 		{
 			Entity _ent = entity;
-			_ent.teleportTo(x, y, z);
+			double _tx = x;
+			double _ty = y;
+			double _tz = z;
+			_ent.teleportTo(_tx, _ty, _tz);
 			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport(x, y, z, _ent.getYRot(), _ent.getXRot());
+				_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 		}
 	}
 }

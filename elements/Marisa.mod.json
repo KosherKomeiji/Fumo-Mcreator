@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 85,
   "_type": "livingentity",
   "definition": {
     "mobName": "Marisa Kirisame",
@@ -144,6 +144,8 @@
       4,
       4,
       2
-    ]
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": []
   }
 }

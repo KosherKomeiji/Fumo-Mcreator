@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fumo:marisa_hat_item"
+    }
+  ],
+  "result": {
+    "item": "fumo:marisa_item",
+    "count": 1
+  }
+}

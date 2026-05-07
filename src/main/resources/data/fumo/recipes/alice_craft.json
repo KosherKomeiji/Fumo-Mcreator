@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cde",
+    "fgf"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:white_wool"
+    },
+    "b": {
+      "item": "minecraft:yellow_wool"
+    },
+    "c": {
+      "item": "minecraft:brown_mushroom"
+    },
+    "d": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "e": {
+      "item": "minecraft:red_mushroom"
+    },
+    "f": {
+      "item": "minecraft:blue_wool"
+    },
+    "g": {
+      "item": "minecraft:dark_oak_log"
+    }
+  },
+  "result": {
+    "item": "fumo:alice_item",
+    "count": 1
+  }
+}

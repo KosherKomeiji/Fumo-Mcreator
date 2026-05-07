@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:cyan_wool"
+    },
+    "b": {
+      "item": "minecraft:ghast_tear"
+    },
+    "c": {
+      "item": "minecraft:white_wool"
+    },
+    "d": {
+      "item": "minecraft:nether_star"
+    },
+    "e": {
+      "item": "minecraft:iron_sword"
+    }
+  },
+  "result": {
+    "item": "fumo:youmu_item",
+    "count": 1
+  }
+}

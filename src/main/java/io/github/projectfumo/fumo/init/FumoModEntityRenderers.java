@@ -1,37 +1,16 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
 package io.github.projectfumo.fumo.init;
 
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.Dist;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.api.distmarker.Dist;
 
-import io.github.projectfumo.fumo.client.renderer.YuyukoRenderer;
-import io.github.projectfumo.fumo.client.renderer.YoumuRenderer;
-import io.github.projectfumo.fumo.client.renderer.TewiRenderer;
-import io.github.projectfumo.fumo.client.renderer.TanCirnoRenderer;
-import io.github.projectfumo.fumo.client.renderer.SunnyMilkRenderer;
-import io.github.projectfumo.fumo.client.renderer.ReimuRenderer;
-import io.github.projectfumo.fumo.client.renderer.PatchouliRenderer;
-import io.github.projectfumo.fumo.client.renderer.NitoriRenderer;
-import io.github.projectfumo.fumo.client.renderer.NewReimuRenderer;
-import io.github.projectfumo.fumo.client.renderer.NazrinRenderer;
-import io.github.projectfumo.fumo.client.renderer.MeilingRenderer;
-import io.github.projectfumo.fumo.client.renderer.MarisaRenderer;
-import io.github.projectfumo.fumo.client.renderer.MarisaHatRenderer;
-import io.github.projectfumo.fumo.client.renderer.KoishiRenderer;
-import io.github.projectfumo.fumo.client.renderer.FlandreRenderer;
-import io.github.projectfumo.fumo.client.renderer.EikiRenderer;
-import io.github.projectfumo.fumo.client.renderer.DebugFumoRenderer;
-import io.github.projectfumo.fumo.client.renderer.CirnoRenderer;
-import io.github.projectfumo.fumo.client.renderer.ChenRenderer;
-import io.github.projectfumo.fumo.client.renderer.BlueReimuRenderer;
-import io.github.projectfumo.fumo.client.renderer.AliceRenderer;
+import io.github.projectfumo.fumo.client.renderer.*;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class FumoModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
@@ -56,5 +35,6 @@ public class FumoModEntityRenderers {
 		event.registerEntityRenderer(FumoModEntities.NAZRIN.get(), NazrinRenderer::new);
 		event.registerEntityRenderer(FumoModEntities.SUNNY_MILK.get(), SunnyMilkRenderer::new);
 		event.registerEntityRenderer(FumoModEntities.ALICE.get(), AliceRenderer::new);
+		event.registerEntityRenderer(FumoModEntities.REMILIA.get(), RemiliaRenderer::new);
 	}
 }

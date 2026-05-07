@@ -8,8 +8,8 @@
       "registry_name": "reimu",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/entity/ReimuEntity.java",
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/ReimuRenderer.java"
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/ReimuRenderer.java",
+          "src/main/java/io/github/projectfumo/fumo/entity/ReimuEntity.java"
         ]
       },
       "path": "~/BootlegReimu"
@@ -50,8 +50,8 @@
       "registry_name": "eiki",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/entity/EikiEntity.java",
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/EikiRenderer.java"
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/EikiRenderer.java",
+          "src/main/java/io/github/projectfumo/fumo/entity/EikiEntity.java"
         ]
       },
       "path": "~/Eiki"
@@ -120,8 +120,8 @@
       "registry_name": "marisa_item",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/MarisaItemItem.java",
-          "src/main/resources/assets/fumo/models/item/marisa_item.json"
+          "src/main/resources/assets/fumo/models/item/marisa_item.json",
+          "src/main/java/io/github/projectfumo/fumo/item/MarisaItemItem.java"
         ]
       },
       "path": "~/Marisa"
@@ -336,7 +336,7 @@
       "registry_name": "reimu_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/reimu_craft.json"
+          "src/main/resources/data/fumo/recipes/reimu_craft.json"
         ]
       },
       "path": "~/Reimu"
@@ -349,8 +349,8 @@
       "registry_name": "cirno",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/CirnoRenderer.java",
-          "src/main/java/io/github/projectfumo/fumo/entity/CirnoEntity.java"
+          "src/main/java/io/github/projectfumo/fumo/entity/CirnoEntity.java",
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/CirnoRenderer.java"
         ]
       },
       "path": "~/Cirno"
@@ -363,8 +363,8 @@
       "registry_name": "cirno_item",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/CirnoItemItem.java",
-          "src/main/resources/assets/fumo/models/item/cirno_item.json"
+          "src/main/resources/assets/fumo/models/item/cirno_item.json",
+          "src/main/java/io/github/projectfumo/fumo/item/CirnoItemItem.java"
         ]
       },
       "path": "~/Cirno"
@@ -447,8 +447,8 @@
       "registry_name": "tan_cirno",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/TanCirnoRenderer.java",
-          "src/main/java/io/github/projectfumo/fumo/entity/TanCirnoEntity.java"
+          "src/main/java/io/github/projectfumo/fumo/entity/TanCirnoEntity.java",
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/TanCirnoRenderer.java"
         ]
       },
       "path": "~/TanCirno"
@@ -461,8 +461,8 @@
       "registry_name": "tan_cirno_item",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/TanCirnoItemItem.java",
-          "src/main/resources/assets/fumo/models/item/tan_cirno_item.json"
+          "src/main/resources/assets/fumo/models/item/tan_cirno_item.json",
+          "src/main/java/io/github/projectfumo/fumo/item/TanCirnoItemItem.java"
         ]
       },
       "path": "~/TanCirno"
@@ -489,7 +489,7 @@
       "registry_name": "cirno_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/cirno_craft.json"
+          "src/main/resources/data/fumo/recipes/cirno_craft.json"
         ]
       },
       "path": "~/Cirno"
@@ -525,7 +525,7 @@
       "registry_name": "eiki_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/eiki_recipe.json"
+          "src/main/resources/data/fumo/recipes/eiki_recipe.json"
         ]
       },
       "path": "~/Eiki"
@@ -538,7 +538,7 @@
       "registry_name": "marisa_hat_crafting",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/marisa_hat_crafting.json"
+          "src/main/resources/data/fumo/recipes/marisa_hat_crafting.json"
         ]
       },
       "path": "~/Marisa Hat"
@@ -614,7 +614,7 @@
       "registry_name": "craft_chen",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/craft_chen.json"
+          "src/main/resources/data/fumo/recipes/craft_chen.json"
         ]
       },
       "path": "~/Chen"
@@ -654,8 +654,8 @@
       "registry_name": "new_reimu",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/entity/NewReimuEntity.java",
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/NewReimuRenderer.java"
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/NewReimuRenderer.java",
+          "src/main/java/io/github/projectfumo/fumo/entity/NewReimuEntity.java"
         ]
       },
       "path": "~/Reimu"
@@ -668,8 +668,8 @@
       "registry_name": "new_reimu_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fumo/models/item/new_reimu_item.json",
-          "src/main/java/io/github/projectfumo/fumo/item/NewReimuItemItem.java"
+          "src/main/java/io/github/projectfumo/fumo/item/NewReimuItemItem.java",
+          "src/main/resources/assets/fumo/models/item/new_reimu_item.json"
         ]
       },
       "path": "~/Reimu"
@@ -717,8 +717,8 @@
       "registry_name": "blue_reimu",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/BlueReimuRenderer.java",
-          "src/main/java/io/github/projectfumo/fumo/entity/BlueReimuEntity.java"
+          "src/main/java/io/github/projectfumo/fumo/entity/BlueReimuEntity.java",
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/BlueReimuRenderer.java"
         ]
       },
       "path": "~/BlueReimu"
@@ -807,8 +807,8 @@
       "registry_name": "koishi",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/KoishiRenderer.java",
-          "src/main/java/io/github/projectfumo/fumo/entity/KoishiEntity.java"
+          "src/main/java/io/github/projectfumo/fumo/entity/KoishiEntity.java",
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/KoishiRenderer.java"
         ]
       },
       "path": "~/Koishi"
@@ -821,8 +821,8 @@
       "registry_name": "koishi_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fumo/models/item/koishi_item.json",
-          "src/main/java/io/github/projectfumo/fumo/item/KoishiItemItem.java"
+          "src/main/java/io/github/projectfumo/fumo/item/KoishiItemItem.java",
+          "src/main/resources/assets/fumo/models/item/koishi_item.json"
         ]
       },
       "path": "~/Koishi"
@@ -870,8 +870,8 @@
       "registry_name": "flandre",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/FlandreRenderer.java",
-          "src/main/java/io/github/projectfumo/fumo/entity/FlandreEntity.java"
+          "src/main/java/io/github/projectfumo/fumo/entity/FlandreEntity.java",
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/FlandreRenderer.java"
         ]
       },
       "path": "~/Flandre"
@@ -944,8 +944,8 @@
       "registry_name": "creative_tab_icon",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/CreativeTabIconItem.java",
-          "src/main/resources/assets/fumo/models/item/creative_tab_icon.json"
+          "src/main/resources/assets/fumo/models/item/creative_tab_icon.json",
+          "src/main/java/io/github/projectfumo/fumo/item/CreativeTabIconItem.java"
         ]
       },
       "path": "~/Base/Icons"
@@ -989,7 +989,7 @@
       "registry_name": "koishi_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/koishi_recipe.json"
+          "src/main/resources/data/fumo/recipes/koishi_recipe.json"
         ]
       },
       "path": "~/Koishi"
@@ -1002,7 +1002,7 @@
       "registry_name": "flandre_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/flandre_recipe.json"
+          "src/main/resources/data/fumo/recipes/flandre_recipe.json"
         ]
       },
       "path": "~/Flandre"
@@ -1015,7 +1015,7 @@
       "registry_name": "tan_cirno_achievement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/tan_cirno_achievement.json"
+          "src/main/resources/data/fumo/advancements/tan_cirno_achievement.json"
         ]
       },
       "path": "~/TanCirno"
@@ -1028,7 +1028,7 @@
       "registry_name": "cirno_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/cirno_advancement.json"
+          "src/main/resources/data/fumo/advancements/cirno_advancement.json"
         ]
       },
       "path": "~/Cirno"
@@ -1041,7 +1041,7 @@
       "registry_name": "reimu_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/reimu_advancement.json"
+          "src/main/resources/data/fumo/advancements/reimu_advancement.json"
         ]
       },
       "path": "~/Reimu"
@@ -1054,7 +1054,7 @@
       "registry_name": "marisa_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/marisa_advancement.json"
+          "src/main/resources/data/fumo/advancements/marisa_advancement.json"
         ]
       },
       "path": "~/Marisa"
@@ -1067,7 +1067,7 @@
       "registry_name": "eiki_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/eiki_advancement.json"
+          "src/main/resources/data/fumo/advancements/eiki_advancement.json"
         ]
       },
       "path": "~/Eiki"
@@ -1080,7 +1080,7 @@
       "registry_name": "chen_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/chen_advancement.json"
+          "src/main/resources/data/fumo/advancements/chen_advancement.json"
         ]
       },
       "path": "~/Chen"
@@ -1093,7 +1093,7 @@
       "registry_name": "blue_reimu_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/blue_reimu_advancement.json"
+          "src/main/resources/data/fumo/advancements/blue_reimu_advancement.json"
         ]
       },
       "path": "~/BlueReimu"
@@ -1106,7 +1106,7 @@
       "registry_name": "koishi_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/koishi_advancement.json"
+          "src/main/resources/data/fumo/advancements/koishi_advancement.json"
         ]
       },
       "path": "~/Koishi"
@@ -1119,7 +1119,7 @@
       "registry_name": "flande_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/flande_advancement.json"
+          "src/main/resources/data/fumo/advancements/flande_advancement.json"
         ]
       },
       "path": "~/Flandre"
@@ -1132,7 +1132,7 @@
       "registry_name": "fumo_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/fumo_advancement.json"
+          "src/main/resources/data/fumo/advancements/fumo_advancement.json"
         ]
       },
       "path": "~/Base/BaseAdvancements"
@@ -1156,7 +1156,7 @@
       "registry_name": "bootleg_fumo_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/bootleg_fumo_advancement.json"
+          "src/main/resources/data/fumo/advancements/bootleg_fumo_advancement.json"
         ]
       },
       "path": "~/Base/BaseAdvancements"
@@ -1169,7 +1169,7 @@
       "registry_name": "boot_leg_reimu_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/boot_leg_reimu_advancement.json"
+          "src/main/resources/data/fumo/advancements/boot_leg_reimu_advancement.json"
         ]
       },
       "path": "~/BootlegReimu"
@@ -1182,8 +1182,8 @@
       "registry_name": "meiling",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/MeilingRenderer.java",
-          "src/main/java/io/github/projectfumo/fumo/entity/MeilingEntity.java"
+          "src/main/java/io/github/projectfumo/fumo/entity/MeilingEntity.java",
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/MeilingRenderer.java"
         ]
       },
       "path": "~/Meiling"
@@ -1196,8 +1196,8 @@
       "registry_name": "meiling_item",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/MeilingItemItem.java",
-          "src/main/resources/assets/fumo/models/item/meiling_item.json"
+          "src/main/resources/assets/fumo/models/item/meiling_item.json",
+          "src/main/java/io/github/projectfumo/fumo/item/MeilingItemItem.java"
         ]
       },
       "path": "~/Meiling"
@@ -1245,7 +1245,7 @@
       "registry_name": "meiling_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/meiling_advancement.json"
+          "src/main/resources/data/fumo/advancements/meiling_advancement.json"
         ]
       },
       "path": "~/Meiling"
@@ -1258,7 +1258,7 @@
       "registry_name": "meiling_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/meiling_craft.json"
+          "src/main/resources/data/fumo/recipes/meiling_craft.json"
         ]
       },
       "path": "~/Meiling"
@@ -1271,8 +1271,8 @@
       "registry_name": "youmu",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/entity/YoumuEntity.java",
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/YoumuRenderer.java"
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/YoumuRenderer.java",
+          "src/main/java/io/github/projectfumo/fumo/entity/YoumuEntity.java"
         ]
       },
       "path": "~/Youmu"
@@ -1334,7 +1334,7 @@
       "registry_name": "youmu_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/youmu_advancement.json"
+          "src/main/resources/data/fumo/advancements/youmu_advancement.json"
         ]
       },
       "path": "~/Youmu"
@@ -1347,7 +1347,7 @@
       "registry_name": "youmu_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/youmu_craft.json"
+          "src/main/resources/data/fumo/recipes/youmu_craft.json"
         ]
       },
       "path": "~/Youmu"
@@ -1360,7 +1360,7 @@
       "registry_name": "tutorial_advancement_pickup",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/tutorial_advancement_pickup.json"
+          "src/main/resources/data/fumo/advancements/tutorial_advancement_pickup.json"
         ]
       },
       "path": "~/Base/BaseAdvancements"
@@ -1373,7 +1373,7 @@
       "registry_name": "rotate_fumo_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/rotate_fumo_advancement.json"
+          "src/main/resources/data/fumo/advancements/rotate_fumo_advancement.json"
         ]
       },
       "path": "~/Base/BaseAdvancements"
@@ -1386,7 +1386,7 @@
       "registry_name": "fumo_feed_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/fumo_feed_advancement.json"
+          "src/main/resources/data/fumo/advancements/fumo_feed_advancement.json"
         ]
       },
       "path": "~/Base/BaseAdvancements"
@@ -1399,7 +1399,7 @@
       "registry_name": "fumo_tutorial_base_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/fumo_tutorial_base_advancement.json"
+          "src/main/resources/data/fumo/advancements/fumo_tutorial_base_advancement.json"
         ]
       },
       "path": "~/Base/BaseAdvancements"
@@ -1412,8 +1412,8 @@
       "registry_name": "reimu_icon",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/ReimuIconItem.java",
-          "src/main/resources/assets/fumo/models/item/reimu_icon.json"
+          "src/main/resources/assets/fumo/models/item/reimu_icon.json",
+          "src/main/java/io/github/projectfumo/fumo/item/ReimuIconItem.java"
         ]
       },
       "path": "~/Base/Icons"
@@ -1426,8 +1426,8 @@
       "registry_name": "marisa_icon",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fumo/models/item/marisa_icon.json",
-          "src/main/java/io/github/projectfumo/fumo/item/MarisaIconItem.java"
+          "src/main/java/io/github/projectfumo/fumo/item/MarisaIconItem.java",
+          "src/main/resources/assets/fumo/models/item/marisa_icon.json"
         ]
       },
       "path": "~/Base/Icons"
@@ -1454,8 +1454,8 @@
       "registry_name": "eiki_icon",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/EikiIconItem.java",
-          "src/main/resources/assets/fumo/models/item/eiki_icon.json"
+          "src/main/resources/assets/fumo/models/item/eiki_icon.json",
+          "src/main/java/io/github/projectfumo/fumo/item/EikiIconItem.java"
         ]
       },
       "path": "~/Base/Icons"
@@ -1468,8 +1468,8 @@
       "registry_name": "flan_icon",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/FlanIconItem.java",
-          "src/main/resources/assets/fumo/models/item/flan_icon.json"
+          "src/main/resources/assets/fumo/models/item/flan_icon.json",
+          "src/main/java/io/github/projectfumo/fumo/item/FlanIconItem.java"
         ]
       },
       "path": "~/Base/Icons"
@@ -1496,8 +1496,8 @@
       "registry_name": "marisa_hat_icon",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fumo/models/item/marisa_hat_icon.json",
-          "src/main/java/io/github/projectfumo/fumo/item/MarisaHatIconItem.java"
+          "src/main/java/io/github/projectfumo/fumo/item/MarisaHatIconItem.java",
+          "src/main/resources/assets/fumo/models/item/marisa_hat_icon.json"
         ]
       },
       "path": "~/Base/Icons"
@@ -1524,8 +1524,8 @@
       "registry_name": "bootleg_reimu_icon",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fumo/models/item/bootleg_reimu_icon.json",
-          "src/main/java/io/github/projectfumo/fumo/item/BootlegReimuIconItem.java"
+          "src/main/java/io/github/projectfumo/fumo/item/BootlegReimuIconItem.java",
+          "src/main/resources/assets/fumo/models/item/bootleg_reimu_icon.json"
         ]
       },
       "path": "~/Base/Icons"
@@ -1538,8 +1538,8 @@
       "registry_name": "tan_cirno_icon",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fumo/models/item/tan_cirno_icon.json",
-          "src/main/java/io/github/projectfumo/fumo/item/TanCirnoIconItem.java"
+          "src/main/java/io/github/projectfumo/fumo/item/TanCirnoIconItem.java",
+          "src/main/resources/assets/fumo/models/item/tan_cirno_icon.json"
         ]
       },
       "path": "~/Base/Icons"
@@ -1566,8 +1566,8 @@
       "registry_name": "chen_icon",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/ChenIconItem.java",
-          "src/main/resources/assets/fumo/models/item/chen_icon.json"
+          "src/main/resources/assets/fumo/models/item/chen_icon.json",
+          "src/main/java/io/github/projectfumo/fumo/item/ChenIconItem.java"
         ]
       },
       "path": "~/Base/Icons"
@@ -1636,8 +1636,8 @@
       "registry_name": "yuyuko_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fumo/models/item/yuyuko_item.json",
-          "src/main/java/io/github/projectfumo/fumo/item/YuyukoItemItem.java"
+          "src/main/java/io/github/projectfumo/fumo/item/YuyukoItemItem.java",
+          "src/main/resources/assets/fumo/models/item/yuyuko_item.json"
         ]
       },
       "path": "~/Yuyuko"
@@ -1685,7 +1685,7 @@
       "registry_name": "yuyuko_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/yuyuko_advancement.json"
+          "src/main/resources/data/fumo/advancements/yuyuko_advancement.json"
         ]
       },
       "path": "~/Yuyuko"
@@ -1698,7 +1698,7 @@
       "registry_name": "yuyuko_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/yuyuko_craft.json"
+          "src/main/resources/data/fumo/recipes/yuyuko_craft.json"
         ]
       },
       "path": "~/Yuyuko"
@@ -1711,8 +1711,8 @@
       "registry_name": "yuyuko_icon",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fumo/models/item/yuyuko_icon.json",
-          "src/main/java/io/github/projectfumo/fumo/item/YuyukoIconItem.java"
+          "src/main/java/io/github/projectfumo/fumo/item/YuyukoIconItem.java",
+          "src/main/resources/assets/fumo/models/item/yuyuko_icon.json"
         ]
       },
       "path": "~/Base/Icons"
@@ -1725,8 +1725,8 @@
       "registry_name": "patchouli",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/entity/PatchouliEntity.java",
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/PatchouliRenderer.java"
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/PatchouliRenderer.java",
+          "src/main/java/io/github/projectfumo/fumo/entity/PatchouliEntity.java"
         ]
       },
       "path": "~/Patchouli"
@@ -1739,8 +1739,8 @@
       "registry_name": "patchouli_item",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/PatchouliItemItem.java",
-          "src/main/resources/assets/fumo/models/item/patchouli_item.json"
+          "src/main/resources/assets/fumo/models/item/patchouli_item.json",
+          "src/main/java/io/github/projectfumo/fumo/item/PatchouliItemItem.java"
         ]
       },
       "path": "~/Patchouli"
@@ -1788,7 +1788,7 @@
       "registry_name": "patchouli_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/patchouli_advancement.json"
+          "src/main/resources/data/fumo/advancements/patchouli_advancement.json"
         ]
       },
       "path": "~/Patchouli"
@@ -1801,7 +1801,7 @@
       "registry_name": "patchouli_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/patchouli_craft.json"
+          "src/main/resources/data/fumo/recipes/patchouli_craft.json"
         ]
       },
       "path": "~/Patchouli"
@@ -1814,7 +1814,7 @@
       "registry_name": "fumo_pickup_mechanic",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/fumo_pickup_mechanic.json"
+          "src/main/resources/data/fumo/advancements/fumo_pickup_mechanic.json"
         ]
       },
       "path": "~/Base/BaseAdvancements"
@@ -1890,7 +1890,7 @@
       "registry_name": "nitori_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/nitori_advancement.json"
+          "src/main/resources/data/fumo/advancements/nitori_advancement.json"
         ]
       },
       "path": "~/Nitori"
@@ -1903,7 +1903,7 @@
       "registry_name": "nitori_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/nitori_craft.json"
+          "src/main/resources/data/fumo/recipes/nitori_craft.json"
         ]
       },
       "path": "~/Nitori"
@@ -1979,7 +1979,7 @@
       "registry_name": "tewi_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/tewi_advancement.json"
+          "src/main/resources/data/fumo/advancements/tewi_advancement.json"
         ]
       },
       "path": "~/Tewi"
@@ -1992,7 +1992,7 @@
       "registry_name": "tewi_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/tewi_craft.json"
+          "src/main/resources/data/fumo/recipes/tewi_craft.json"
         ]
       },
       "path": "~/Tewi"
@@ -2005,8 +2005,8 @@
       "registry_name": "nazrin",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/entity/NazrinEntity.java",
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/NazrinRenderer.java"
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/NazrinRenderer.java",
+          "src/main/java/io/github/projectfumo/fumo/entity/NazrinEntity.java"
         ]
       },
       "path": "~/Nazrin"
@@ -2019,8 +2019,8 @@
       "registry_name": "nazrin_item",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/item/NazrinItemItem.java",
-          "src/main/resources/assets/fumo/models/item/nazrin_item.json"
+          "src/main/resources/assets/fumo/models/item/nazrin_item.json",
+          "src/main/java/io/github/projectfumo/fumo/item/NazrinItemItem.java"
         ]
       },
       "path": "~/Nazrin"
@@ -2068,7 +2068,7 @@
       "registry_name": "nazrin_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/nazrin_advancement.json"
+          "src/main/resources/data/fumo/advancements/nazrin_advancement.json"
         ]
       },
       "path": "~/Nazrin"
@@ -2081,7 +2081,7 @@
       "registry_name": "nazrin_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/nazrin_craft.json"
+          "src/main/resources/data/fumo/recipes/nazrin_craft.json"
         ]
       },
       "path": "~/Nazrin"
@@ -2117,8 +2117,8 @@
       "registry_name": "sunny_milk",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/SunnyMilkRenderer.java",
-          "src/main/java/io/github/projectfumo/fumo/entity/SunnyMilkEntity.java"
+          "src/main/java/io/github/projectfumo/fumo/entity/SunnyMilkEntity.java",
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/SunnyMilkRenderer.java"
         ]
       },
       "path": "~/SunnyMilk"
@@ -2131,8 +2131,8 @@
       "registry_name": "sunny_milk_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fumo/models/item/sunny_milk_item.json",
-          "src/main/java/io/github/projectfumo/fumo/item/SunnyMilkItemItem.java"
+          "src/main/java/io/github/projectfumo/fumo/item/SunnyMilkItemItem.java",
+          "src/main/resources/assets/fumo/models/item/sunny_milk_item.json"
         ]
       },
       "path": "~/SunnyMilk"
@@ -2180,7 +2180,7 @@
       "registry_name": "sunny_milk_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/sunny_milk_advancement.json"
+          "src/main/resources/data/fumo/advancements/sunny_milk_advancement.json"
         ]
       },
       "path": "~/SunnyMilk"
@@ -2193,7 +2193,7 @@
       "registry_name": "sunny_milk_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/sunny_milk_craft.json"
+          "src/main/resources/data/fumo/recipes/sunny_milk_craft.json"
         ]
       },
       "path": "~/SunnyMilk"
@@ -2220,8 +2220,8 @@
       "registry_name": "alice",
       "metadata": {
         "files": [
-          "src/main/java/io/github/projectfumo/fumo/client/renderer/AliceRenderer.java",
-          "src/main/java/io/github/projectfumo/fumo/entity/AliceEntity.java"
+          "src/main/java/io/github/projectfumo/fumo/entity/AliceEntity.java",
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/AliceRenderer.java"
         ]
       },
       "path": "~/Alice"
@@ -2269,7 +2269,7 @@
       "registry_name": "alice_advancement",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/advancement/alice_advancement.json"
+          "src/main/resources/data/fumo/advancements/alice_advancement.json"
         ]
       },
       "path": "~/Alice"
@@ -2282,7 +2282,7 @@
       "registry_name": "alice_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/alice_craft.json"
+          "src/main/resources/data/fumo/recipes/alice_craft.json"
         ]
       },
       "path": "~/Alice"
@@ -2295,7 +2295,7 @@
       "registry_name": "marisa_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/marisa_recipe.json"
+          "src/main/resources/data/fumo/recipes/marisa_recipe.json"
         ]
       },
       "path": "~/Marisa"
@@ -2308,10 +2308,99 @@
       "registry_name": "marisa_hat_remove_crafting",
       "metadata": {
         "files": [
-          "src/main/resources/data/fumo/recipe/marisa_hat_remove_crafting.json"
+          "src/main/resources/data/fumo/recipes/marisa_hat_remove_crafting.json"
         ]
       },
       "path": "~/Marisa Hat"
+    },
+    {
+      "name": "Remilia",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remilia",
+      "metadata": {
+        "files": [
+          "src/main/java/io/github/projectfumo/fumo/client/renderer/RemiliaRenderer.java",
+          "src/main/java/io/github/projectfumo/fumo/entity/RemiliaEntity.java"
+        ]
+      },
+      "path": "~/Remilia"
+    },
+    {
+      "name": "RemiliaItem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remilia_item",
+      "metadata": {
+        "files": [
+          "src/main/java/io/github/projectfumo/fumo/item/RemiliaItemItem.java",
+          "src/main/resources/assets/fumo/models/item/remilia_item.json"
+        ]
+      },
+      "path": "~/Remilia"
+    },
+    {
+      "name": "RemiliaSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remilia_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/io/github/projectfumo/fumo/procedures/RemiliaSpawnProcedure.java"
+        ]
+      },
+      "path": "~/Remilia"
+    },
+    {
+      "name": "RemiliaAdvancement",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remilia_advancement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fumo/advancements/remilia_advancement.json"
+        ]
+      },
+      "path": "~/Remilia"
+    },
+    {
+      "name": "RemiliaCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remilia_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fumo/recipes/remilia_craft.json"
+        ]
+      },
+      "path": "~/Remilia"
     }
   ],
   "variable_elements": [],
@@ -2432,8 +2521,25 @@
       "advancements.chen_advancement.title": "Chen",
       "entity.fumo.nitori": "Nitori",
       "advancements.marisa_advancement.title": "Marisa",
-      "item.fumo.reimu_item": "Bootleg Reimu Hakurei"
+      "item.fumo.reimu_item": "Bootleg Reimu Hakurei",
+      "entity.fumo.remilia": "Remilia",
+      "item.fumo.remilia_item": "Remilia",
+      "advancements.remilia_advancement.descr": "Obtain Remilia",
+      "advancements.remilia_advancement.title": "Remilia"
     }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/io/github/projectfumo/fumo/init/FumoModTrades.java",
+      "src/main/java/io/github/projectfumo/fumo/init/FumoModItems.java",
+      "src/main/java/io/github/projectfumo/fumo/init/FumoModEntities.java",
+      "src/main/java/io/github/projectfumo/fumo/init/FumoModEntityRenderers.java",
+      "src/main/java/io/github/projectfumo/fumo/init/FumoModModels.java",
+      "src/main/java/io/github/projectfumo/fumo/FumoMod.java",
+      "src/main/resources/META-INF/mods.toml",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/io/github/projectfumo/fumo/init/FumoModTabs.java"
+    ]
   },
   "foldersRoot": {
     "name": "~",
@@ -2534,13 +2640,17 @@
       {
         "name": "Alice",
         "children": []
+      },
+      {
+        "name": "Remilia",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "fumo",
     "modName": "Fumo",
-    "version": "17.2.0",
+    "version": "18.0.0",
     "description": "Adds Fumos from Touhou.",
     "author": "KosherKomeiji",
     "websiteURL": "https://modrinth.com/mod/fumo",
@@ -2551,9 +2661,9 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "neoforge-1.21.1",
-    "credits": "MCreator, reimuu@planetminecraft.com, mafurako@planetminecraft.com",
+    "currentGenerator": "forge-1.20.1",
+    "credits": "MCreator, reimuu",
     "modElementsPackage": "io.github.projectfumo.fumo"
   },
-  "mcreatorVersion": 202500113416
+  "mcreatorVersion": 202600114619
 }

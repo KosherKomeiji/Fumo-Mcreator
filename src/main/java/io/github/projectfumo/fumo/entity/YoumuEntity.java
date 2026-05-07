@@ -1,15 +1,14 @@
-
 package io.github.projectfumo.fumo.entity;
 
-import net.neoforged.neoforge.fluids.FluidType;
-import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
-import net.neoforged.neoforge.common.NeoForgeMod;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.common.ForgeMod;
 
-import net.minecraft.world.level.pathfinder.PathType;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -22,12 +21,7 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AreaEffectCloud;
-import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
@@ -36,19 +30,25 @@ import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
 
 import io.github.projectfumo.fumo.procedures.FumoDespawnProcedure;
 import io.github.projectfumo.fumo.init.FumoModItems;
 import io.github.projectfumo.fumo.init.FumoModEntities;
 
 public class YoumuEntity extends Animal {
+	public YoumuEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(FumoModEntities.YOUMU.get(), world);
+	}
+
 	public YoumuEntity(EntityType<YoumuEntity> type, Level world) {
 		super(type, world);
+		setMaxUpStep(0.6f);
 		xpReward = 0;
 		setNoAi(false);
 		setPersistenceRequired();
-		this.setPathfindingMalus(PathType.WATER, 0);
+		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
 		this.moveControl = new MoveControl(this) {
 			@Override
 			public void tick() {
@@ -84,6 +84,11 @@ public class YoumuEntity extends Animal {
 	}
 
 	@Override
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
+		return NetworkHooks.getEntitySpawningPacket(this);
+	}
+
+	@Override
 	protected PathNavigation createNavigation(Level world) {
 		return new WaterBoundPathNavigation(this, world);
 	}
@@ -95,18 +100,23 @@ public class YoumuEntity extends Animal {
 	}
 
 	@Override
+	public MobType getMobType() {
+		return MobType.UNDEFINED;
+	}
+
+	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
 	}
 
-	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
 		this.spawnAtLocation(new ItemStack(FumoModItems.YOUMU_ITEM.get()));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.wool.break"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.break"));
 	}
 
 	@Override
@@ -117,7 +127,7 @@ public class YoumuEntity extends Animal {
 			return false;
 		if (damagesource.getDirectEntity() instanceof Player)
 			return false;
-		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
 		if (damagesource.is(DamageTypes.FALL))
 			return false;
@@ -141,12 +151,7 @@ public class YoumuEntity extends Animal {
 	}
 
 	@Override
-	public boolean ignoreExplosion(Explosion explosion) {
-		return true;
-	}
-
-	@Override
-	public boolean fireImmune() {
+	public boolean ignoreExplosion() {
 		return true;
 	}
 
@@ -168,7 +173,7 @@ public class YoumuEntity extends Animal {
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
 		YoumuEntity retval = FumoModEntities.YOUMU.get().create(serverWorld);
-		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null);
+		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
 		return retval;
 	}
 
@@ -183,16 +188,16 @@ public class YoumuEntity extends Animal {
 	}
 
 	@Override
-	public boolean canDrownInFluidType(FluidType type) {
+	public boolean canBreatheUnderwater() {
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
 		Level world = this.level();
 		Entity entity = this;
-		return false;
+		return true;
 	}
 
-	public static void init(RegisterSpawnPlacementsEvent event) {
+	public static void init() {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -202,8 +207,7 @@ public class YoumuEntity extends Animal {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
-		builder = builder.add(NeoForgeMod.SWIM_SPEED, 0.3);
+		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.3);
 		return builder;
 	}
 }

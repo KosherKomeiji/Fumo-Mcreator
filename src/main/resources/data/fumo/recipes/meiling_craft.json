@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "efe"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:book"
+    },
+    "b": {
+      "item": "minecraft:green_wool"
+    },
+    "c": {
+      "item": "minecraft:white_wool"
+    },
+    "d": {
+      "item": "minecraft:gold_block"
+    },
+    "e": {
+      "item": "minecraft:red_wool"
+    },
+    "f": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": {
+    "item": "fumo:meiling_item",
+    "count": 1
+  }
+}
